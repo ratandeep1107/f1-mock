@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            width: 100%;
+            background: linear-gradient(to right , pink , greenyellow);
+            height: 70px;
+        }
+        nav {
+            width: 80%;
+            max-width: 1200px;
+            margin: 0 auto;
+            
+            /* background-color: red; */
+        }
+        nav ul {
+            display: flex;
+            justify-content: space-evenly;
+        }
+        nav ul li {
+            list-style: none;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            /* background-color: white; */
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+        }
+        .dropdown-item {
+            display: none;
+            position: absolute;
+            top: 70px;
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 10px 20px;
+            flex-direction: column;
+            transition: all 0.5ms ease;
+        }
+        .dropdown-item li {
+            height: max-content;
+            line-height: 32px;
+            border-bottom: 1px solid #e5e5e5;
+        }
+        .dropdown:hover > .dropdown-item {
+            display: block;
+            border-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li class="dropdown">
+                    <a href="#">Dropdown</a>
+                    <ul class="dropdown-item">
+                        <li>Dropdown item 1</li>
+                        <li>Dropdown item 2</li>
+                        <li>Dropdown item 3</li>
+                    </ul>
+                </li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
+</body>
+</html>
